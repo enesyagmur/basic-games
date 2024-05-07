@@ -1,0 +1,15 @@
+.box {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #223541;
+  margin: 5px;
+  border-radius: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  &:hover {
+    background-color: #345163;
+  }
+}

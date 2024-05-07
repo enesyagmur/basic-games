@@ -1,5 +1,26 @@
 .xox {
   width: 100%;
   height: 100vh;
-  background-color: #2a0049;
+  background-image: linear-gradient(#2d0965, #3c0068);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  main {
+    width: 480px;
+    height: 480px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .reset {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: none;
+    color: #fefa39;
+    cursor: pointer;
+    background-image: linear-gradient(#2d0965, #3c0068);
+    font-weight: bold;
+  }
 }
