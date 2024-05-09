@@ -12,14 +12,19 @@ const Box = ({
   game,
   setGame,
 }) => {
-  const [thisValue, setThisValue] = useState();
+  const [thisValue, setThisValue] = useState({ id: -1, value: "" });
+  const [newArray, setNewArray] = useState(game);
 
-  const newArray = game;
+  //başarılı bir koşulda diğer elemanların değerlerini sıfırlamay ve oyun sonu yapmaya çalışıyorum
+  //henüz yapamadım xox sayfasında kazanma ile tetiklenen yeni bir state oluşturucam ve başarılı her if sonunda onu tetikleyip box ların css lerinde değişiklik yapıcam
 
   const gameFinishCheckFunc = () => {
     if (game[1].value !== "" && game[4].value !== "" && game[7].value !== "") {
       if (game[1].value === game[4].value && game[4].value === game[7].value) {
-        console.log(`${game[1].value} oyuncusu kazandı`);
+        if (thisValue.id === 1 || thisValue.id === 4 || thisValue.id === 7) {
+        } else {
+          setThisValue({ value: "" });
+        }
       }
     }
 
@@ -63,16 +68,19 @@ const Box = ({
   const changeValue = () => {
     setResetCheck("");
     if (value === "") {
-      setThisValue("x");
       newArray[id].value = "x";
+      setThisValue({ id: newArray[id].id, value: newArray[id].value });
+
       setValue("o");
     } else if (value === "x") {
-      setThisValue("x");
       newArray[id].value = "x";
+      setThisValue({ id: newArray[id].id, value: newArray[id].value });
+
       setValue("o");
     } else if (value === "o") {
-      setThisValue("o");
       newArray[id].value = "o";
+      setThisValue({ id: newArray[id].id, value: newArray[id].value });
+
       setValue("x");
     }
     setGame(newArray);
@@ -86,10 +94,14 @@ const Box = ({
     }
   }, [resetCheck]);
 
-  if (thisValue) {
+  if (thisValue.value !== "") {
     return (
       <div className="box">
-        {thisValue === "x" ? <img src={x} alt="" /> : <img src={o} alt="" />}
+        {thisValue.value === "x" ? (
+          <img src={x} alt="" />
+        ) : (
+          <img src={o} alt="" />
+        )}
         {<p>{id}</p>}
       </div>
     );
