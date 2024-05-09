@@ -13,7 +13,52 @@ const Box = ({
   setGame,
 }) => {
   const [thisValue, setThisValue] = useState();
+
   const newArray = game;
+
+  const gameFinishCheckFunc = () => {
+    if (game[1].value !== "" && game[4].value !== "" && game[7].value !== "") {
+      if (game[1].value === game[4].value && game[4].value === game[7].value) {
+        console.log(`${game[1].value} oyuncusu kazandı`);
+      }
+    }
+
+    if (game[3].value !== "" && game[4].value !== "" && game[5].value !== "") {
+      if (game[3].value === game[4].value && game[4].value === game[5].value) {
+        console.log(`${game[3].value} oyuncusu kazandı`);
+      }
+    }
+    if (game[6].value !== "" && game[7].value !== "" && game[8].value !== "") {
+      if (game[6].value === game[7].value && game[7].value === game[8].value) {
+        console.log(`${game[6].value} oyuncusu kazandı`);
+      }
+    }
+
+    if (game[0].value !== "") {
+      if (game[0].value === game[1].value && game[1].value === game[2].value) {
+        console.log(`${game[0].value} oyuncusu kazandı`);
+      } else if (
+        game[0].value === game[3].value &&
+        game[3].value === game[6].value
+      ) {
+        console.log(`${game[0].value} oyuncusu kazandı`);
+      }
+      if (game[0].value === game[4].value && game[4].value === game[8].value) {
+        console.log(`${game[0].value} oyuncusu kazandı`);
+      }
+    }
+
+    if (game[2].value !== "") {
+      if (game[2].value === game[4].value && game[4].value === game[6].value) {
+        console.log(`${game[2].value} oyuncusu kazandı`);
+      } else if (
+        game[2].value === game[5].value &&
+        game[5].value === game[8].value
+      ) {
+        console.log(`${game[2].value} oyuncusu kazandı`);
+      }
+    }
+  };
 
   const changeValue = () => {
     setResetCheck("");
@@ -31,6 +76,7 @@ const Box = ({
       setValue("x");
     }
     setGame(newArray);
+    gameFinishCheckFunc();
   };
 
   useEffect(() => {

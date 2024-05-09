@@ -7,16 +7,19 @@ const Xox = () => {
   const [value, setValue] = useState("");
   const [resetCheck, setResetCheck] = useState("");
   const [game, setGame] = useState(gamePlan);
-  // şu an oyunun bitimini kontrol etmeye çalışıyorum
-  useEffect(() => {
-    const result = game.filter(
-      (item) => item.value === "x" || item.value === "o"
-    );
-  }, [game]);
-  console.log(game);
+  const [winingId, setWiningId] = useState([]);
+
+  useEffect(() => {}, [game]);
+
   const array = [0, 1, 2, 3, 4, 5, 6, 7, 8];
   return (
     <div className="xox">
+      <div className="title">
+        <p className="x">X</p>
+        <p className="o">O</p>
+        <p className="x">X</p>
+      </div>
+
       <main>
         {array.map((i) => (
           <Box

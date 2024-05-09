@@ -6,19 +6,41 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  .title {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-weight: bold;
+      font-size: 70px;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+    .x {
+      color: #ffc226;
+    }
+    .o {
+      color: #26ffcb;
+    }
+  }
   main {
     width: 480px;
     height: 480px;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
   }
+
   .reset {
     width: 150px;
     height: 50px;
     border-radius: 10px;
     margin-top: 10px;
     border: none;
-    color: #fefa39;
+    color: #ffc226;
     cursor: pointer;
     background-image: linear-gradient(#2d0965, #3c0068);
     font-weight: bold;
