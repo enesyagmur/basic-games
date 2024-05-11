@@ -26,23 +26,20 @@
       color: #26ffcb;
     }
   }
-  main {
-    width: 480px;
-    height: 480px;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-  }
-
-  .reset {
+  .start {
     width: 150px;
     height: 50px;
     border-radius: 10px;
     margin-top: 10px;
     border: none;
-    color: #ffc226;
+    color: #26ffcb;
     cursor: pointer;
     background-image: linear-gradient(#2d0965, #3c0068);
     font-weight: bold;
+    transition: all 0.5s;
+    &:hover {
+      background-image: linear-gradient(#26ffcb, #3c0068);
+      color: #ffc226;
+    }
   }
 }

@@ -1,0 +1,44 @@
+.alert {
+  width: 480px;
+  height: 480px;
+  position: absolute;
+  top: auto;
+  left: auto;
+  background-color: rgba($color: #223541, $alpha: 0.8);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+
+  .title {
+    font-size: 90px;
+    font-weight: bold;
+    color: #ffc226;
+  }
+  .result {
+    font-size: 40px;
+    font-weight: bold;
+    color: #26ffcb;
+
+    width: 100%;
+    text-align: center;
+  }
+  button {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: none;
+    color: #26ffcb;
+    cursor: pointer;
+    background-color: #2d0965;
+    font-weight: bold;
+    transition: all 0.5s;
+    &:hover {
+      background-color: #26ffcb;
+      color: #ffc226;
+    }
+  }
+}
