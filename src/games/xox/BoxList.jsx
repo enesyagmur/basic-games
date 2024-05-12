@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./boxList.scss";
 import Box from "./Box";
 import gamePlan from "./gameTable.json";
@@ -30,9 +30,9 @@ const BoxList = () => {
       >
         Restart
       </button>
-      {resetCheck.result !== "" ? (
+      {/* {resetCheck.result !== "" ? (
         <Alert setResetCheck={setResetCheck} result={resetCheck.result} />
-      ) : null}
+      ) : null} */}
     </div>
   );
 };

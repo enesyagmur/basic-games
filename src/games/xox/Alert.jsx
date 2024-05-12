@@ -8,6 +8,7 @@ const Alert = ({ setResetCheck, result }) => {
     setResetCheck({ state: "", result: "" });
     navigate("/");
   };
+
   return (
     <div className="alert">
       <p className="title">Oyun Bitti</p>

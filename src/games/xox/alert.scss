@@ -1,16 +1,24 @@
+@keyframes goBottom {
+  0% {
+    top: -480px;
+  }
+  100% {
+    top: 30%;
+  }
+}
+
 .alert {
   width: 480px;
   height: 480px;
   position: absolute;
-  top: auto;
   left: auto;
   background-color: rgba($color: #223541, $alpha: 0.8);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  animation: goBottom 1s ease;
 
   .title {
     font-size: 90px;
